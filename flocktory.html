@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flocktory's test task</title>
+	<link rel="stylesheet" type="text/css" href="flocktory.css">
+</head>
+<body>
+	<main class="flocktory-test-app">
+		<h1>Сравнение кампаний</h1>
+
+		<section>
+			<h2>Источник данных</h2>
+			<input class="input-text" value="https://gist.githubusercontent.com/heydiplo/b1296495b5db998f0b4d/raw/afb3efee16797b5fed44966370d0750eb1fe9e46/data.json">
+			<button>Загрузить данные</button>
+		</section>
+
+		<section class="campaign-list">
+			<h2>Список кампаний</h2>
+			<ul id="campaign-list"></ul>
+		</section>
+
+		<section class="compare-chart">
+			<h2>Сравнение кампаний</h2>
+			<div id="compare-chart"></div>
+		</section>
+	</main>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="flocktory.js"></script>
+</body>
+</html>
