@@ -1,0 +1,33 @@
+/**
+	Floctory's test task styles
+
+	@author Leon Vinogradov
+*/
+.flocktory-test-app {
+  font-family: "Trebuchet MS";
+  width: 80%;
+  margin: 20px auto;
+}
+.flocktory-test-app .input-text {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.flocktory-test-app .campaign-list {
+  float: left;
+  width: 320px;
+}
+.flocktory-test-app .campaign-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.flocktory-test-app .campaign-list ul li {
+  padding: 4px 8px;
+}
+.flocktory-test-app .campaign-list ul li:hover {
+  background-color: #60ae44;
+}
+.flocktory-test-app .compare-chart {
+  margin-left: 340px;
+}
