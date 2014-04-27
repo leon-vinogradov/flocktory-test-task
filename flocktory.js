@@ -38,10 +38,12 @@ var floctory = {
 			self.stack = d3.layout.stack()
 				.values(function(d) { return d.values; });
 
-			self.chart = d3.select('#compare-chart').append('svg')
-				.attr('width', self.config.width)
-				.attr('height', self.config.height)
-				.attr('transform', 'rotate(90,' + self.config.width / 2 + ',' + self.config.height / 2 + ')');
+			self.chart = d3.select('#compare-chart')
+				.append('svg')
+					.attr('width', self.config.width)
+					.attr('height', self.config.height)
+				.append('g')
+					.attr('transform', 'rotate(90,' + self.config.width / 2 + ',' + self.config.height / 2 + ')');
 
 			self.chartArea = self.chart.append('g')
 				.attr('transform', 'translate(' + self.config.margin.left + ',' + self.config.margin.top + ')');
@@ -137,7 +139,7 @@ var floctory = {
 				.attr('d', function (d) { return self.area(d.values); })
 				.style('fill', function(d) { return self.color(d.id); })
 			.append("svg:title")
-				.text(function(d) { console.log(d); return d.title; });
+				.text(function(d) { return d.title; });
 
 		// set metric sums as axis labels
 		self.yAxis.tickFormat(function (d) {
