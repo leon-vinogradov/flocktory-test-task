@@ -15,10 +15,11 @@
 .flocktory-test-app .campaign-list {
   float: left;
   width: 320px;
+  margin-right: 20px;
 }
 .flocktory-test-app .campaign-list ul {
   list-style: none;
-  height: 490px;
+  height: 455px;
   margin: 0;
   padding: 0;
   overflow-y: scroll;
@@ -35,7 +36,6 @@
 }
 .flocktory-test-app .compare-chart {
   float: left;
-  margin-left: 20px;
 }
 .flocktory-test-app .compare-chart .axis path,
 .flocktory-test-app .compare-chart .axis line {

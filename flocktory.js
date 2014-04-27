@@ -23,8 +23,6 @@ var floctory = {
 		var self = this;
 
 		d3.json('data.json', function(error, data) {
-			data = data.slice(10, 40); // Test with short data list
-
 			self.color = d3.scale.category10();
 
 			self.x = d3.scale.ordinal()
@@ -56,6 +54,7 @@ var floctory = {
 				.y0(function(d) { return self.y(d.y0); })
 				.y1(function(d) { return self.y(d.y0 + d.y); });
 
+			// make campaign list
 			var listItem = d3.select('#campaign-list')
 				.selectAll('li')
 					.data(data)
@@ -76,15 +75,15 @@ var floctory = {
 			selectedCampaignsLength = selectedCampaigns[0].length;
 
 		// clear graph and exit if not enough campaigns selected
-		if (selectedCampaignsLength < self.config.minCampaigns) {
-			self.clearGraph();
+		if (selectedCampaignsLength < this.config.minCampaigns) {
+			this.clearGraph();
 			return;
 		}
 
-		self.drawGraph(selectedCampaigns.data());
+		this.drawGraph(selectedCampaigns.data());
 
 		// disable checkboxes and exit if too many campaigns selected
-		if (selectedCampaignsLength >= self.config.maxCampaigns) {
+		if (selectedCampaignsLength >= this.config.maxCampaigns) {
 			d3.selectAll('#campaign-list input:not(:checked)').attr('disabled', true);
 			return;
 		}
@@ -133,9 +132,12 @@ var floctory = {
 		chartItem = self.chartArea.selectAll('path').data(campaigns, function(d) { return d.id; });
 
 		// draw main chart
-		chartItem.enter().append('path')
-			.attr('d', function (d) { return self.area(d.values); })
-			.style('fill', function(d) { return self.color(d.id); });
+		chartItem.enter()
+			.append('path')
+				.attr('d', function (d) { return self.area(d.values); })
+				.style('fill', function(d) { return self.color(d.id); })
+			.append("svg:title")
+				.text(function(d) { console.log(d); return d.title; });
 
 		// set metric sums as axis labels
 		self.yAxis.tickFormat(function (d) {
