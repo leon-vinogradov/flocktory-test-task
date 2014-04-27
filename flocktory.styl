@@ -19,23 +19,25 @@
 
     ul
       list-style none
+      height 490px
       margin 0
       padding 0
+      overflow-y scroll
 
       li
         label
           display block
           padding 4px 8px
-          cursor pointer
-
-          &:hover
-            background-color #ccc
 
         input
           margin-right 8px
 
+          &[disabled] + span
+            color #ccc
+
   .compare-chart
     float left
+    margin-left: 20px
 
     .axis
       path
