@@ -21,13 +21,25 @@
       list-style none
       margin 0
       padding 0
-      cursor pointer
 
       li
-        padding 4px 8px
+        label
+          display block
+          padding 4px 8px
+          cursor pointer
 
-        &:hover
-          background-color #60ae44
+          &:hover
+            background-color #ccc
+
+        input
+          margin-right 8px
 
   .compare-chart
-    margin-left 340px
+    float left
+
+    .axis
+      path
+      line
+        fill none
+        shape-rendering crispEdges
+        stroke #000

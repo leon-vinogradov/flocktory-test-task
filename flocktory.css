@@ -20,14 +20,24 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.flocktory-test-app .campaign-list ul li label {
+  display: block;
+  padding: 4px 8px;
   cursor: pointer;
 }
-.flocktory-test-app .campaign-list ul li {
-  padding: 4px 8px;
+.flocktory-test-app .campaign-list ul li label:hover {
+  background-color: #ccc;
 }
-.flocktory-test-app .campaign-list ul li:hover {
-  background-color: #60ae44;
+.flocktory-test-app .campaign-list ul li input {
+  margin-right: 8px;
 }
 .flocktory-test-app .compare-chart {
-  margin-left: 340px;
+  float: left;
+}
+.flocktory-test-app .compare-chart .axis path,
+.flocktory-test-app .compare-chart .axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #000;
 }
