@@ -16,18 +16,32 @@
   .campaign-list
     float left
     width 320px
+    margin-right 20px
 
     ul
       list-style none
+      height 455px
       margin 0
       padding 0
-      cursor pointer
+      overflow-y scroll
 
       li
-        padding 4px 8px
+        label
+          display block
+          padding 4px 8px
 
-        &:hover
-          background-color #60ae44
+        input
+          margin-right 8px
+
+          &[disabled] + span
+            color #ccc
 
   .compare-chart
-    margin-left 340px
+    float left
+
+    .axis
+      path
+      line
+        fill none
+        shape-rendering crispEdges
+        stroke #000

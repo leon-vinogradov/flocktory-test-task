@@ -15,19 +15,31 @@
 .flocktory-test-app .campaign-list {
   float: left;
   width: 320px;
+  margin-right: 20px;
 }
 .flocktory-test-app .campaign-list ul {
   list-style: none;
+  height: 455px;
   margin: 0;
   padding: 0;
-  cursor: pointer;
+  overflow-y: scroll;
 }
-.flocktory-test-app .campaign-list ul li {
+.flocktory-test-app .campaign-list ul li label {
+  display: block;
   padding: 4px 8px;
 }
-.flocktory-test-app .campaign-list ul li:hover {
-  background-color: #60ae44;
+.flocktory-test-app .campaign-list ul li input {
+  margin-right: 8px;
+}
+.flocktory-test-app .campaign-list ul li input[disabled] + span {
+  color: #ccc;
 }
 .flocktory-test-app .compare-chart {
-  margin-left: 340px;
+  float: left;
+}
+.flocktory-test-app .compare-chart .axis path,
+.flocktory-test-app .compare-chart .axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #000;
 }
